@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Younglings — Solidity smart-contract audit tool">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d1c23"/>
+      <stop offset="1" stop-color="#0f0f12"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#bb86fc" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#bb86fc" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <!-- faint Solidity-style diamond field -->
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="2">
+    <path d="M120 90 180 30l60 60-60 60z"/>
+    <path d="M640 420l70-70 70 70-70 70z"/>
+    <path d="M600 80l45-45 45 45-45 45z"/>
+    <path d="M90 430l55-55 55 55-55 55z"/>
+  </g>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- shield + check -->
+  <path d="M400 158l102 38v74c0 70-44 116-102 136-58-20-102-66-102-136v-74z"
+        fill="#bb86fc" fill-opacity="0.09" stroke="#bb86fc" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M356 288l32 32 60-66" fill="none" stroke="#bb86fc" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- wordmark -->
+  <text x="400" y="500" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="34" letter-spacing="7" fill="#ffffff">YOUNGLINGS</text>
+  <text x="400" y="536" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="14" letter-spacing="4" fill="#b8a6d9">SMART CONTRACT AUDIT</text>
+</svg>

@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Judika Marpaung - IT</title>
+<meta name="description" content="Portofolio Judika Marpaung &mdash; mahasiswa Teknik Informatika dengan fokus Cyber Security, secure coding, dan audit smart contract.">
+<meta name="author" content="Judika Marpaung">
+<meta name="theme-color" content="#121212">
+<!-- Open Graph / social preview. Ganti foto.png & URL ke URL absolut (https://domain/...) setelah deploy. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Judika Marpaung &mdash; Cyber Security &amp; Blockchain">
+<meta property="og:description" content="Portofolio Judika Marpaung &mdash; mahasiswa Teknik Informatika fokus Cyber Security, secure coding, dan audit smart contract.">
+<meta property="og:url" content="https://judika-m.github.io/inijudi/">
+<meta property="og:image" content="https://judika-m.github.io/inijudi/foto.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Judika Marpaung &mdash; Cyber Security &amp; Blockchain">
+<meta name="twitter:description" content="Portofolio Judika Marpaung &mdash; Cyber Security, secure coding, audit smart contract.">
+<meta name="twitter:image" content="https://judika-m.github.io/inijudi/foto.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='15' fill='%23bb86fc'/><text x='32' y='46' font-size='40' font-weight='bold' fill='%23121212' text-anchor='middle' font-family='Arial,Helvetica,sans-serif'>J</text></svg>">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Judika Marpaung","url":"https://judika-m.github.io/inijudi/","image":"https://judika-m.github.io/inijudi/foto.png","jobTitle":"Informatics Engineering Student \u2014 Cyber Security","email":"mailto:inijudika@gmail.com","alumniOf":"Perbanas Institute Jakarta","knowsAbout":["Cyber Security","Secure Coding","Smart Contract Auditing","Blockchain"],"sameAs":["https://www.linkedin.com/in/judika-marpaung","https://github.com/JudikaM"]}
+</script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  @keyframes blink{ 0%,49%{ opacity:1; } 50%,100%{ opacity:0; } }
+  .app .type-caret{ animation:blink 1s steps(1,end) infinite; }
+  .app .skill-chip{ box-sizing:border-box; position:relative; height:46px; min-width:46px; max-width:320px; padding:0 22px; border-radius:9999px; background:var(--surface2); color:var(--text); border:1px solid var(--border); font-family:inherit; font-size:13px; font-weight:600; letter-spacing:0.3px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; overflow:hidden; white-space:nowrap; clip-path:inset(0 0% round 9999px); filter:drop-shadow(0px 8px 8px rgba(0,0,0,.35)) drop-shadow(0px 2px 3px rgba(0,0,0,.2)); transition:clip-path .55s cubic-bezier(.77,0,.18,1), max-width .45s cubic-bezier(.5,1.4,.5,1), padding .45s cubic-bezier(.5,1.4,.5,1), background-color .2s ease, border-color .2s ease, color .15s ease, filter .35s ease; }
+  .app .skill-chip::after{ content:''; position:absolute; inset:0; border-radius:9999px; background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.22) 50%,transparent 65%); transform:translateX(-150%); transition:transform .55s ease .05s; pointer-events:none; }
+  .app .skill-chip.lit::after{ transform:translateX(150%); }
+  .app .skill-chip.lit{ clip-path:inset(0 calc(50% - 23px) 0 calc(50% - 23px) round 9999px); background:var(--green); border-color:var(--green); color:var(--btn-text); filter:drop-shadow(0 0 8px color-mix(in srgb,var(--green) 70%,transparent)) drop-shadow(0 6px 18px color-mix(in srgb,var(--green) 50%,transparent)); }
+  .app .skill-chip.active{ max-width:46px; padding:0; clip-path:inset(0 0% round 9999px); filter:drop-shadow(0 0 8px color-mix(in srgb,var(--green) 70%,transparent)) drop-shadow(0 6px 18px color-mix(in srgb,var(--green) 50%,transparent)); }
+  .app .skill-label{ transition:opacity .15s ease, transform .3s cubic-bezier(.7,0,1,1); }
+  .app .skill-chip.lit .skill-label, .app .skill-chip.active .skill-label{ opacity:0; transform:scaleX(0.2) translateY(4px); }
+  .app .skill-ic{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; opacity:0; transform:scale(0) rotate(135deg); transition:opacity .2s ease .1s, transform .7s cubic-bezier(.34,2.2,.5,1) .05s; pointer-events:none; }
+  .app .skill-chip.lit .skill-ic, .app .skill-chip.active .skill-ic{ opacity:1; transform:scale(1) rotate(0); }
+  body{ font-family:'Figtree','Helvetica Neue',Helvetica,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
+  input,textarea,button{ font-family:inherit; }
+  .app image-slot{ display:block !important; width:100% !important; height:100% !important; }
+  .app.theme-dark{ --bg:#121212; --bg2:#0a0a0a; --surface:#181818; --surface2:#1f1f1f; --surface3:#282828; --text:#ffffff; --text2:#b3b3b3; --green:#bb86fc; --greenHover:#cba4fd; --accent:#cba4fd; --btn-text:#000; --nav-active-text:#000; --border:rgba(255,255,255,0.08); --cardShadow:rgba(0,0,0,0.30) 0px 8px 8px; --menuShadow:rgba(0,0,0,0.50) 0px 8px 24px; --navbg:rgba(10,10,10,0.85); --avatarBg:radial-gradient(circle at 50% 34%, #33333a, #131315 74%); }
+  .app.theme-light{ --bg:#ffffff; --bg2:#f7f7f7; --surface:#eeeeee; --surface2:#e7e7e7; --surface3:#dddddd; --text:#121212; --text2:#535353; --green:#5f3573; --greenHover:#4e2b60; --accent:#5f3573; --btn-text:#ffffff; --nav-active-text:#ffffff; --border:rgba(0,0,0,0.10); --cardShadow:rgba(0,0,0,0.12) 0px 8px 8px; --menuShadow:rgba(0,0,0,0.18) 0px 8px 24px; --navbg:rgba(255,255,255,0.85); --avatarBg:radial-gradient(circle at 50% 34%, #ffffff, #d8d8de 74%); }
+  .app .card.proj{ transition:transform .25s ease, background-color .25s ease; }
+  .app .pill.btn, .app .iconbtn, .app .playbtn, .app .navlink{ transition:transform .2s ease; }
+  .app .card.proj:hover{ transform:translateY(-8px); background:var(--surface3) !important; }
+  .app .pill.btn:hover{ transform:scale(1.045); background:var(--greenHover) !important; }
+  .app .pill.ghost{ transition:transform .2s ease, border-color .2s ease, background-color .2s ease, color .2s ease; }
+  .app .pill.ghost:hover{ transform:scale(1.045); border-color:var(--green) !important; color:var(--green) !important; background:color-mix(in srgb, var(--green) 10%, transparent) !important; }
+  .app .iconbtn:hover{ transform:scale(1.08); color:var(--text) !important; border-color:var(--text) !important; }
+  .app #contact .iconbtn{ transition:transform .25s cubic-bezier(.34,1.56,.64,1), background-color .25s ease, color .25s ease, border-color .25s ease, box-shadow .25s ease; }
+  .app #contact .iconbtn:hover{ transform:translateY(-6px); background:var(--green) !important; color:var(--btn-text) !important; border-color:var(--green) !important; box-shadow:0 0 0 5px color-mix(in srgb, var(--green) 20%, transparent), rgba(0,0,0,0.45) 0px 14px 26px -8px; }
+  .app.theme-light #contact .iconbtn:hover{ box-shadow:0 0 0 5px color-mix(in srgb, var(--green) 18%, transparent), rgba(0,0,0,0.25) 0px 14px 26px -8px; }
+  .app #contact .iconbtn:active{ transform:translateY(-2px) scale(0.95); box-shadow:0 0 0 4px color-mix(in srgb, var(--green) 22%, transparent); }
+  .app .navlink:hover{ color:var(--text) !important; }
+  .app .topbar .iconbtn{ transition:transform .25s cubic-bezier(.34,1.56,.64,1), background-color .25s ease, color .25s ease, border-color .25s ease, box-shadow .25s ease; }
+  .app .topbar .iconbtn:hover{ transform:translateY(-2px) scale(1.08); background:var(--green) !important; color:var(--btn-text) !important; border-color:var(--green) !important; box-shadow:0 0 0 5px color-mix(in srgb, var(--green) 20%, transparent); }
+  .app .topbar .iconbtn:active{ transform:scale(0.92); }
+  .app .playbtn:hover{ transform:scale(1.08); background:var(--greenHover) !important; }
+  .app .proj-card{ cursor:pointer; transition:background-color .25s ease, transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+  .app .proj-card:hover{ background:var(--surface2); transform:translateY(-10px); border-color:var(--accent); box-shadow:rgba(0,0,0,0.55) 0px 28px 50px -12px, 0 0 0 1px color-mix(in srgb, var(--green) 35%, transparent); }
+  .app.theme-light .proj-card:hover{ border-color:var(--accent); box-shadow:rgba(0,0,0,0.28) 0px 28px 50px -12px; }
+  .app .proj-card:hover .proj-arrow{ opacity:1; transform:translateX(0); }
+  .app .proj-card:hover .proj-cover{ transform:scale(1.06); }
+  .app .proj-tag{ transition:background-color .25s ease, color .25s ease; }
+  .app .proj-card:hover .proj-tag{ background:var(--green); color:var(--btn-text); }
+  /* ----- project detail modal ----- */
+  @keyframes modalFade{ from{ opacity:0; } to{ opacity:1; } }
+  @keyframes modalPop{ from{ opacity:0; transform:translateY(26px) scale(.96); } to{ opacity:1; transform:translateY(0) scale(1); } }
+  @keyframes sheetUp{ from{ transform:translateY(100%); } to{ transform:translateY(0); } }
+  .app .modal-overlay{ animation:modalFade .25s ease both; }
+  .app .modal-card{ animation:modalPop .42s cubic-bezier(.34,1.4,.5,1) both; }
+  .app .modal-close{ transition:transform .25s cubic-bezier(.34,1.56,.64,1), background-color .2s ease, color .2s ease; }
+  .app .modal-close:hover{ transform:rotate(90deg) scale(1.08); background:var(--green) !important; color:var(--btn-text) !important; }
+  .app .modal-btn{ transition:transform .2s ease, background-color .2s ease, border-color .2s ease, color .2s ease; }
+  .app .modal-btn.solid:hover{ transform:scale(1.04); background:var(--greenHover) !important; }
+  .app .modal-btn.ghost:hover{ transform:scale(1.04); border-color:var(--green) !important; color:var(--green) !important; background:color-mix(in srgb, var(--green) 10%, transparent) !important; }
+  .app .proj-cover{ transition:transform .35s ease; }
+  /* ----- certificates ----- */
+  .app .cert-card{ cursor:pointer; transition:background-color .25s ease, transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+  .app .cert-card:hover{ background:var(--surface2); transform:translateY(-8px); border-color:var(--accent); box-shadow:rgba(0,0,0,0.5) 0px 24px 44px -12px, 0 0 0 1px color-mix(in srgb, var(--green) 30%, transparent); }
+  .app.theme-light .cert-card:hover{ box-shadow:rgba(0,0,0,0.22) 0px 24px 44px -12px; }
+  .app .cert-thumb{ position:relative; aspect-ratio:1.6/1; overflow:hidden; border-radius:14px; background:var(--surface3); }
+  .app .cert-thumb img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top; transition:transform .4s ease; }
+  .app .cert-card:hover .cert-thumb img{ transform:scale(1.06); }
+  /* homepage: compact thumbnail strip */
+  .app .cert-strip-wrap{ position:relative; }
+  .app .cert-strip{ display:flex; gap:12px; overflow-x:auto; padding:2px; scroll-snap-type:x proximity; scrollbar-width:none; -ms-overflow-style:none; }
+  .app .cert-strip::-webkit-scrollbar{ width:0; height:0; display:none; }
+  .app .cert-fade{ position:absolute; top:0; bottom:0; width:90px; pointer-events:none; opacity:1; transition:opacity .3s ease; }
+  .app .cert-fade.right{ right:0; background:linear-gradient(to right, transparent, var(--bg) 84%); }
+  .app .cert-fade.left{ left:0; background:linear-gradient(to left, transparent, var(--bg) 84%); }
+  .app .cert-nav{ position:absolute; top:50%; transform:translateY(-50%); z-index:2; width:40px; height:40px; border-radius:50%; border:1px solid var(--border); background:var(--surface2); color:var(--text); cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:var(--menuShadow); opacity:1; transition:opacity .3s ease, transform .2s cubic-bezier(.34,1.56,.64,1), background-color .2s ease, color .2s ease, border-color .2s ease; }
+  .app .cert-nav.right{ right:8px; }
+  .app .cert-nav.left{ left:8px; }
+  .app .cert-nav:hover{ background:var(--green); color:var(--btn-text); border-color:var(--green); transform:translateY(-50%) scale(1.08); }
+  .app .cert-nav:active{ transform:translateY(-50%) scale(.94); }
+  .app .cert-strip-wrap.at-end .cert-fade.right, .app .cert-strip-wrap.at-end .cert-nav.right{ opacity:0; pointer-events:none; }
+  .app .cert-fade.left, .app .cert-nav.left{ opacity:0; pointer-events:none; }
+  .app .cert-strip-wrap.scrolled .cert-fade.left, .app .cert-strip-wrap.scrolled .cert-nav.left{ opacity:1; pointer-events:auto; }
+  .app .cert-mini{ position:relative; flex:0 0 auto; width:170px; aspect-ratio:1.6/1; border-radius:12px; overflow:hidden; border:1px solid var(--border); background:var(--surface3); padding:0; cursor:pointer; scroll-snap-align:start; box-shadow:var(--cardShadow); transition:border-color .25s ease, box-shadow .25s ease, transform .18s ease; }
+  .app .cert-mini img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top; transition:transform .35s ease; }
+  .app .cert-mini::after{ content:''; position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,.45), transparent 46%); pointer-events:none; }
+  .app .cert-mini-tag{ position:absolute; left:9px; bottom:7px; z-index:1; font-size:9px; font-weight:800; letter-spacing:.8px; text-transform:uppercase; color:#fff; }
+  .app .cert-mini:hover{ border-color:var(--accent); box-shadow:0 0 0 1px color-mix(in srgb, var(--green) 35%, transparent), var(--cardShadow); }
+  .app .cert-mini:hover img{ transform:scale(1.07); }
+  .app .cert-mini:active{ transform:scale(.97); }
+  .app .cert-all{ transition:color .2s ease; }
+  .app .cert-all svg{ transition:transform .25s ease; }
+  .app .cert-all:hover{ color:var(--greenHover) !important; }
+  .app .cert-all:hover svg{ transform:translateX(3px); }
+  /* full-screen certificates page (overlay) */
+  @keyframes pageIn{ from{ opacity:0; transform:translateY(16px); } to{ opacity:1; transform:none; } }
+  .app .certs-page{ animation:pageIn .32s cubic-bezier(.22,1,.36,1) both; }
+  .app .certs-back{ transition:transform .25s cubic-bezier(.34,1.56,.64,1), background-color .25s ease, color .25s ease, border-color .25s ease; }
+  .app .certs-back:hover{ transform:translateX(-3px); background:var(--green) !important; color:var(--btn-text) !important; border-color:var(--green) !important; }
+  .app .avatar-wrap{ transition:transform .3s cubic-bezier(.34,1.56,.64,1); cursor:pointer; }
+  .app .avatar-wrap:hover{ transform:translateY(-8px); }
+  .app .avatar-wrap:hover .avatar-glow{ opacity:1.8; filter:blur(26px); }
+  .app .avatar-wrap:hover .avatar-panel{ box-shadow:0 0 0 5px color-mix(in srgb, var(--green) 22%, transparent), var(--cardShadow); border-color:color-mix(in srgb, var(--green) 55%, var(--border)); }
+  .app .avatar-wrap:active{ transform:translateY(-4px) scale(0.97); }
+  .app .avatar-glow{ transition:opacity .3s ease, filter .3s ease; }
+  .app .avatar-panel{ transition:box-shadow .3s ease, border-color .3s ease; }
+  .app .avatar-wrap .avatar-img{ transition:transform .35s ease; transform-origin:bottom center; }
+  .app .avatar-wrap:hover .avatar-img{ transform:scale(1.045); }
+
+  /* ---------- Hero: one signature entrance, once ---------- */
+  @keyframes heroRise{ from{ opacity:0; transform:translateY(22px); } to{ opacity:1; transform:none; } }
+  @keyframes heroFade{ from{ opacity:0; } to{ opacity:1; } }
+  @keyframes glowBreathe{ 0%,100%{ opacity:.68; } 50%{ opacity:1; } }
+  .app .hero-kicker{ animation:heroRise .6s cubic-bezier(.22,1,.36,1) .08s both; }
+  .app #home h1{ animation:heroRise .7s cubic-bezier(.22,1,.36,1) .16s both; }
+  .app .hero-tagline{ animation:heroRise .7s cubic-bezier(.22,1,.36,1) .26s both; }
+  .app .hero-actions{ animation:heroRise .7s cubic-bezier(.22,1,.36,1) .36s both; }
+  .app .avatar-wrap{ animation:heroFade .9s ease-out .1s both; }
+  .app .avatar-glow{ animation:glowBreathe 5.5s ease-in-out 1.4s infinite; }
+
+  /* ambient wash behind the hero */
+  .app #home{ position:relative; }
+  .app #home::before{ content:''; position:absolute; left:-15%; right:-15%; top:-90px; height:min(60vh,480px); background:radial-gradient(46% 44% at 38% 30%, color-mix(in srgb, var(--green) 13%, transparent), transparent 62%); pointer-events:none; }
+  .app .hero-row{ position:relative; z-index:1; }
+
+  /* ---------- Education timeline (line stays centered on nodes via --node-col) ---------- */
+  .app .edu-timeline{ --node-col:58px; --node-size:50px; position:relative; }
+  .app .edu-line{ position:absolute; left:calc(var(--node-col) / 2); top:36px; bottom:36px; width:3px; transform:translateX(-50%); border-radius:3px; background:linear-gradient(var(--green), color-mix(in srgb, var(--green) 50%, var(--border)) 38%, color-mix(in srgb, var(--green) 14%, var(--border))); }
+  .app .edu-row{ position:relative; display:grid; grid-template-columns:var(--node-col) 1fr; gap:22px; padding:10px 0; align-items:center; }
+  .app .edu-node-col{ display:flex; justify-content:center; }
+  .app .edu-node{ position:relative; z-index:1; width:var(--node-size); height:var(--node-size); border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:13px; letter-spacing:0.5px; flex-shrink:0; transition:transform .28s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease; }
+  .app .edu-node.cur{ background:var(--green); color:var(--btn-text); box-shadow:0 0 0 5px var(--bg), 0 10px 24px color-mix(in srgb, var(--green) 45%, transparent); }
+  .app .edu-node.past{ background:var(--surface); color:var(--green); border:2px solid var(--green); box-shadow:0 0 0 5px var(--bg); }
+  .app .edu-node.cur::after{ content:''; position:absolute; inset:-3px; border-radius:50%; box-shadow:0 0 0 2px color-mix(in srgb, var(--green) 55%, transparent); animation:eduPulse 2.6s ease-out infinite; pointer-events:none; }
+  @keyframes eduPulse{ 0%{ opacity:.85; transform:scale(1); } 70%,100%{ opacity:0; transform:scale(1.55); } }
+  .app .edu-content{ position:relative; border:1px solid transparent; border-radius:14px; transition:background-color .25s ease, transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  .app .edu-period{ transition:background-color .25s ease, color .25s ease; }
+  .app .edu-row:hover .edu-content{ background:var(--surface); border-color:var(--border); transform:translateX(8px); box-shadow:var(--cardShadow); }
+  .app .edu-row:hover .edu-node{ transform:scale(1.1); }
+  .app .edu-row:hover .edu-period{ background:var(--green); color:var(--btn-text); }
+  /* ---------- Keyboard focus & form affordances ---------- */
+  .app a:focus-visible, .app button:focus-visible{ outline:2px solid var(--green) !important; outline-offset:3px; }
+  .app input:focus-visible, .app textarea:focus-visible{ outline:none !important; border-color:var(--green) !important; box-shadow:0 0 0 3px color-mix(in srgb, var(--green) 25%, transparent); }
+  .app input, .app textarea{ transition:border-color .2s ease, box-shadow .2s ease; }
+  .app input::placeholder, .app textarea::placeholder{ color:var(--text2); opacity:1; }
+
+  @media (prefers-reduced-motion: reduce){ .app .edu-node.cur::after{ animation:none; } }
+  .botbar{ display:none; }
+  .app{ overflow-x:clip; -webkit-tap-highlight-color:transparent; }
+  /* Kill the ~300ms mobile tap delay so nav taps scroll instantly. */
+  .app .navlink, .app .navpill, .app .botlink, .app .pill, .app .iconbtn, .app .proj-card, .app .cert-card, .app .cert-mini, .app .cert-all, .app .modal-btn, .app .skill-chip{ touch-action:manipulation; }
+  .app .botbar{ isolation:isolate; }
+  .app .botbar .botlink{ position:relative; z-index:1; flex:1; align-self:stretch; justify-content:center; color:var(--text2); transition:color .25s ease, transform .2s ease; }
+  .app .botbar .botlink svg{ position:relative; z-index:1; width:18px; height:18px; transition:transform .3s cubic-bezier(.34,1.56,.64,1), color .25s ease, stroke-width .25s ease; }
+  .app .botbar .botlink.on{ color:var(--nav-active-text); }
+  .app .botbar .botlink.on svg{ color:var(--nav-active-text); transform:scale(1.04); stroke-width:2.25; }
+  .app .botbar .bot-label{ display:block; margin-top:0; font-size:8px; line-height:1; font-weight:600; letter-spacing:0; text-align:center; text-transform:none; white-space:nowrap; }
+  .app .botbar .botlink:active{ transform:scale(0.9); }
+
+  /* ---------- Tablet / small laptop ---------- */
+  @media (max-width:840px){
+    .desktop-links{ display:none !important; }
+    .botbar{ display:flex !important; left:12px !important; right:12px !important; bottom:calc(10px + env(safe-area-inset-bottom)) !important; height:56px !important; padding:4px !important; border:1px solid var(--border) !important; border-radius:18px !important; box-shadow:0 4px 8px rgba(0,0,0,.28) !important; }
+    .topbar{ height:58px !important; padding-left:18px !important; padding-right:18px !important; }
+    .content-pad{ padding-left:20px !important; padding-right:20px !important; padding-bottom:108px !important; }
+    #home{ padding:44px 0 40px !important; }
+    .hero-row{ flex-direction:column !important; text-align:center; align-items:center !important; gap:30px !important; }
+    .hero-row > div:last-child{ display:flex; flex-direction:column; align-items:center; }
+    .hero-row p{ margin-left:auto !important; margin-right:auto !important; }
+    .hero-actions{ justify-content:center !important; flex-wrap:wrap; width:100%; }
+    main section{ padding:30px 0 !important; }
+    .card{ padding:26px !important; }
+  }
+
+  /* ---------- Phones ---------- */
+  @media (max-width:600px){
+    .topbar{ height:54px !important; }
+    .avatar-wrap{ width:196px !important; height:262px !important; }
+    .avatar-panel{ top:36px !important; border-radius:22px !important; }
+    .avatar-clip{ border-radius:0 0 22px 22px !important; }
+    #home{ padding:34px 0 34px !important; }
+    /* tagline wraps to two lines here; reserve them so typing doesn't shift layout */
+    .hero-tagline{ min-height:3em !important; }
+    .hero-actions .pill{ flex:1 1 auto; justify-content:center; text-align:center; padding-left:18px !important; padding-right:18px !important; }
+    /* 2-up project grid like a music app */
+    #projects > div{ grid-template-columns:1fr 1fr !important; gap:12px !important; }
+    .proj-card{ padding:12px !important; border-radius:16px !important; }
+    .proj-card h3{ font-size:14px !important; }
+    .app .cert-mini{ width:136px; }
+    /* detail modal becomes a bottom sheet */
+    .modal-overlay{ align-items:flex-end !important; padding:0 !important; }
+    .modal-card{ max-width:100% !important; max-height:92vh !important; border-radius:22px 22px 0 0 !important; animation:sheetUp .4s cubic-bezier(.22,1,.36,1) both !important; }
+    .modal-actions{ flex-direction:column !important; }
+    .modal-actions .modal-btn{ width:100% !important; }
+    /* tighter education timeline; only the size vars change, line stays aligned */
+    .edu-timeline{ --node-col:46px !important; --node-size:42px !important; }
+    .edu-row{ gap:14px !important; padding:8px 0 !important; }
+    .edu-node{ font-size:11px !important; }
+    .edu-content{ padding:6px 12px !important; }
+    .edu-content h3{ font-size:16px !important; }
+    .card{ padding:22px !important; border-radius:18px !important; }
+    #contact > div{ gap:18px !important; }
+  }
+
+  /* ---------- Narrow phones ---------- */
+  @media (max-width:380px){
+    .content-pad{ padding-left:16px !important; padding-right:16px !important; }
+    .avatar-wrap{ width:176px !important; height:238px !important; }
+    .hero-actions{ flex-direction:column; }
+    .hero-actions .pill{ width:100%; }
+    #projects > div{ gap:10px !important; }
+    .botbar a{ font-size:0 !important; }
+    .botbar .bot-label{ font-size:7px; }
+  }
+
+  /* ---------- Touch: kill sticky hover transforms ---------- */
+  @media (hover:none){
+    .app .proj-card:hover, .app .card.proj:hover, .app .avatar-wrap:hover,
+    .app .edu-row:hover .edu-content, .app .pill.btn:hover, .app .pill.ghost:hover,
+    .app .iconbtn:hover, .app .skill-chip:hover, .app .cert-card:hover{ transform:none !important; }
+    .app .proj-card:active, .app .cert-card:active{ transform:scale(0.98) !important; transition:transform .12s ease; }
+    .app .pill.btn:active, .app .pill.ghost:active, .app .modal-btn:active{ transform:scale(0.97) !important; }
+    /* arrow is hover-only on desktop; surface it on touch */
+    .app .proj-card .proj-arrow{ opacity:1 !important; transform:none !important; }
+    .app .cert-mini:hover img{ transform:none !important; }
+    .app .cert-nav:hover{ transform:translateY(-50%) !important; }
+    .app .cert-all:hover svg{ transform:none !important; }
+    .app .certs-back:hover{ transform:none !important; }
+  }
+</style>
+</helmet>
+<div class="app {{ themeClass }}" style="background:var(--bg); color:var(--text); min-height:100vh; width:100%;">
+
+  <svg width="0" height="0" style="position:absolute; pointer-events:none;" aria-hidden="true">
+    <symbol id="ic-html" viewBox="0 0 24 24"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"></path></symbol>
+    <symbol id="ic-css" viewBox="0 0 24 24"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"></path></symbol>
+    <symbol id="ic-js" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.037-.166z"></path></symbol>
+    <symbol id="ic-python" viewBox="0 0 24 24"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"></path></symbol>
+    <symbol id="ic-sol" viewBox="0 0 24 24"><path d="M12 1.6l4.2 3.15L12 7.9 7.8 4.75 12 1.6zm0 14.5l4.2-3.15L12 9.8 7.8 12.95 12 16.1zm0 6.3l4.2-3.15L12 16.1 7.8 19.25 12 22.4z"></path></symbol>
+    <symbol id="ic-web3" viewBox="0 0 24 24"><path d="M12 1.5L5.25 12.04 12 15.84l6.75-3.8L12 1.5zM5.25 13.36L12 22.5l6.75-9.14L12 17.2l-6.75-3.84z"></path></symbol>
+    <symbol id="ic-pg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" d="M4.75 5.5c0-1.55 3.25-2.75 7.25-2.75s7.25 1.2 7.25 2.75v13c0 1.55-3.25 2.75-7.25 2.75s-7.25-1.2-7.25-2.75v-13z"></path><path fill="none" stroke="currentColor" stroke-width="1.7" d="M4.75 5.5c0 1.55 3.25 2.75 7.25 2.75s7.25-1.2 7.25-2.75M4.75 12c0 1.55 3.25 2.75 7.25 2.75S19.25 13.55 19.25 12"></path></symbol>
+    <symbol id="ic-git" viewBox="0 0 24 24"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187z"></path></symbol>
+    <symbol id="ic-react" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2" fill="currentColor"/><ellipse cx="12" cy="12" rx="9.5" ry="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="12" cy="12" rx="9.5" ry="3.5" fill="none" stroke="currentColor" stroke-width="1.6" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9.5" ry="3.5" fill="none" stroke="currentColor" stroke-width="1.6" transform="rotate(-60 12 12)"/></symbol>
+    <symbol id="ic-node" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 2 3 7v10l9 5 9-5V7L12 2z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 8.5v7M15 8.5v7M9 8.5l6 7"/></symbol>
+    <symbol id="ic-docker" viewBox="0 0 24 24"><rect x="2" y="11" width="5" height="3.5" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="8" y="11" width="5" height="3.5" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="11" width="5" height="3.5" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="2" y="6.5" width="5" height="3.5" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="8" y="6.5" width="5" height="3.5" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M21 12.5c1 0 2 .8 2 2 0 2-2 4-7 4.5"/></symbol>
+    <symbol id="ic-linux" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m7 10.5 3 3-3 3M13 16.5h4"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M8 21h8"/></symbol>
+    <symbol id="ic-burp" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 2 4 5.5v6C4 16.5 7.5 20.5 12 22c4.5-1.5 8-5.5 8-10.5v-6L12 2z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M12 7v2M12 15v2M7 12h2M15 12h2"/></symbol>
+    <symbol id="ic-laravel" viewBox="0 0 24 24"><path fill="currentColor" d="M23.643 5.272c.01.048.015.097.015.146v6.59c0 .22-.117.423-.307.534l-5.532 3.189v6.327c0 .22-.117.422-.307.533l-11.594 6.687c-.03.017-.062.03-.095.04a.56.56 0 0 1-.148.02.56.56 0 0 1-.148-.02.558.558 0 0 1-.097-.04L.307 22.591A.615.615 0 0 1 0 22.058V2.15c0-.05.005-.098.015-.146.003-.013.01-.025.014-.038a.604.604 0 0 1 .04-.099c.007-.013.016-.025.024-.037a.591.591 0 0 1 .063-.079c.01-.009.02-.02.03-.028a.604.604 0 0 1 .085-.057L6.13.019A.614.614 0 0 1 6.743 0c.213 0 .411.113.52.299L11.916 8.1l5.648-3.259a.614.614 0 0 1 .614 0l5.157 2.975c.028.016.054.034.079.054.01.009.02.019.03.028a.59.59 0 0 1 .063.08c.008.011.016.023.023.036a.6.6 0 0 1 .04.1c.004.012.01.024.013.037zm-1.228 6.303V6.437l-2.316 1.336-3.215 1.854v5.137l5.531-3.189zm-6.145 10.541v-5.14l-3.17 1.813-9.063 5.186 12.233-1.859zM1.228 3.355v18.26l11.6-6.69-3.17-5.494-3.17 1.812L1.23 3.355zm5.515-2.11L1.535 4.27l5.208 3.005 5.21-3.006L6.743 1.245zM9.37 9.67l3.214-1.854-2.313-4.007-3.214 1.853L9.37 9.67zm8.449 2.544l3.214-1.854-2.313-4.006-3.214 1.853 2.313 4.007zm-6.145 3.543l3.214-1.854-2.313-4.007-3.215 1.854 2.314 4.007z"/></symbol>
+    <symbol id="ic-wireshark" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M2 8c2 0 2 4 4 4s2-4 4-4 2 4 4 4 2-4 4-4"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M2 14c2 0 2 4 4 4s2-4 4-4 2 4 4 4 2-4 4-4"/><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M12 2v4M12 18v4"/></symbol>
+  </svg>
+
+  <header class="topbar" style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; height:64px; padding:0 40px; background:var(--navbg); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); border-bottom:1px solid var(--border);">
+    <a href="#home" onClick="{{ onHome }}" class="navlink" style="display:flex; align-items:center; gap:0; text-decoration:none; color:var(--text);">
+      <span style="font-family:'Figtree',sans-serif; font-weight:800; font-size:20px; line-height:1; letter-spacing:-0.5px;">Judika</span>
+    </a>
+
+    <nav class="desktop-links" ref="{{ navRef }}" style="position:relative; display:flex; align-items:center; gap:6px; background:var(--surface2); border:1px solid var(--border); border-radius:9999px; padding:5px;">
+      <span ref="{{ pillRef }}" style="position:absolute; top:5px; bottom:5px; left:{{ pillLeft }}; width:{{ pillWidth }}; background:var(--green); border-radius:9999px; transform-origin:center; transition:left .45s cubic-bezier(.5,.05,.18,1), width .45s cubic-bezier(.5,.05,.18,1); box-shadow:var(--cardShadow);"></span>
+      <a href="#home" onClick="{{ onNav }}" data-nav="home" aria-current="{{ ariaHome }}" class="navpill" style="position:relative; z-index:1; text-decoration:none; color:{{ navHome }}; font-size:12px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; padding:8px 16px; border-radius:9999px; transition:color .3s ease;">{{ t.nav.home }}</a>
+      <a href="#about" onClick="{{ onNav }}" data-nav="about" aria-current="{{ ariaAbout }}" class="navpill" style="position:relative; z-index:1; text-decoration:none; color:{{ navAbout }}; font-size:12px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; padding:8px 16px; border-radius:9999px; transition:color .3s ease;">{{ t.nav.about }}</a>
+      <a href="#skills" onClick="{{ onNav }}" data-nav="skills" aria-current="{{ ariaSkills }}" class="navpill" style="position:relative; z-index:1; text-decoration:none; color:{{ navSkills }}; font-size:12px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; padding:8px 16px; border-radius:9999px; transition:color .3s ease;">{{ t.nav.skills }}</a>
+      <a href="#education" onClick="{{ onNav }}" data-nav="education" aria-current="{{ ariaEducation }}" class="navpill" style="position:relative; z-index:1; text-decoration:none; color:{{ navEducation }}; font-size:12px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; padding:8px 16px; border-radius:9999px; transition:color .3s ease;">{{ t.nav.education }}</a>
+      <a href="#certificates" onClick="{{ onNav }}" data-nav="certificates" aria-current="{{ ariaCertificates }}" class="navpill" style="position:relative; z-index:1; text-decoration:none; color:{{ navCertificates }}; font-size:12px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; padding:8px 16px; border-radius:9999px; transition:color .3s ease;">{{ t.nav.certificates }}</a>
+      <a href="#projects" onClick="{{ onNav }}" data-nav="projects" aria-current="{{ ariaProjects }}" class="navpill" style="position:relative; z-index:1; text-decoration:none; color:{{ navProjects }}; font-size:12px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; padding:8px 16px; border-radius:9999px; transition:color .3s ease;">{{ t.nav.projects }}</a>
+      <a href="#contact" onClick="{{ onNav }}" data-nav="contact" aria-current="{{ ariaContact }}" class="navpill" style="position:relative; z-index:1; text-decoration:none; color:{{ navContact }}; font-size:12px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; padding:8px 16px; border-radius:9999px; transition:color .3s ease;">{{ t.nav.contact }}</a>
+    </nav>
+
+    <div style="display:flex; align-items:center; gap:12px;">
+      <div style="position:relative; display:flex; align-items:center; background:var(--surface2); border-radius:9999px; padding:3px; border:1px solid var(--border);">
+        <span ref="{{ langPillRef }}" style="position:absolute; top:3px; bottom:3px; left:3px; width:40px; background:var(--green); border-radius:9999px; transform:translateX({{ langShift }}); transform-origin:center; transition:transform .38s cubic-bezier(.34,1.45,.5,1);"></span>
+        <button onClick="{{ setID }}" style="position:relative; z-index:1; width:40px; border:none; cursor:pointer; border-radius:9999px; padding:6px 0; font-size:11px; font-weight:700; letter-spacing:1px; background:transparent; color:{{ idColor }}; transition:color .3s ease;">ID</button>
+        <button onClick="{{ setEN }}" style="position:relative; z-index:1; width:40px; border:none; cursor:pointer; border-radius:9999px; padding:6px 0; font-size:11px; font-weight:700; letter-spacing:1px; background:transparent; color:{{ enColor }}; transition:color .3s ease;">EN</button>
+      </div>
+      <button onClick="{{ toggleTheme }}" aria-label="Toggle theme" class="iconbtn" style="width:38px; height:38px; border-radius:50%; border:1px solid var(--border); background:var(--surface2); color:var(--text); cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:16px;">{{ themeIcon }}</button>
+    </div>
+  </header>
+
+  <main class="content-pad" style="max-width:1080px; margin:0 auto; padding:0 24px 80px;">
+
+    <section id="home" style="scroll-margin-top:80px; padding:72px 0 56px;">
+      <div class="hero-row" style="display:flex; align-items:center; gap:48px;">
+        <div class="avatar-wrap" style="position:relative; flex-shrink:0; width:250px; height:330px;">
+          <div class="avatar-glow" style="position:absolute; left:-16px; right:-16px; top:18%; bottom:-16px; border-radius:32px; background:radial-gradient(circle at 50% 55%, color-mix(in srgb, var(--green) 50%, transparent), transparent 72%); filter:blur(20px);"></div>
+          <div class="avatar-panel" style="position:absolute; left:0; right:0; top:44px; bottom:0; border-radius:26px; overflow:hidden; background:var(--avatarBg); border:1px solid var(--border); box-shadow:var(--cardShadow);"></div>
+          <div class="avatar-clip" style="position:absolute; left:0; right:0; bottom:0; top:-44px; border-radius:0 0 26px 26px; overflow:hidden; pointer-events:none;">
+            <img src="foto.png" alt="Judika Marpaung" class="avatar-img" style="position:absolute; bottom:0; left:50%; margin-left:-59.5%; width:119%; display:block;">
+            <div style="position:absolute; left:0; right:0; bottom:0; height:36%; background:linear-gradient(to top, color-mix(in srgb, var(--bg) 72%, transparent), transparent);"></div>
+          </div>
+        </div>
+        <div style="min-width:0;">
+          <span class="hero-kicker" style="display:inline-block; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:14px;">{{ t.hero.kicker }}</span>
+          <h1 style="font-size:clamp(40px,7vw,84px); font-weight:900; line-height:0.98; letter-spacing:-0.025em; margin-bottom:16px; text-wrap:balance;">Judika Marpaung</h1>
+          <p class="hero-tagline" style="font-size:clamp(15px,2vw,19px); font-weight:500; color:var(--text2); max-width:520px; margin-bottom:28px; min-height:1.5em;">{{ typed }}<span class="type-caret" style="display:inline-block; width:2.5px; height:1.1em; background:var(--text2); margin-left:2px; vertical-align:-3px; border-radius:1px;"></span></p>
+          <div class="hero-actions" style="display:flex; align-items:center; gap:18px;">
+            <a href="#contact" class="pill btn" style="text-decoration:none; background:var(--green); color:var(--btn-text); padding:15px 34px; border-radius:9999px; font-size:13px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase;">{{ t.hero.cta }}</a>
+            <a href="CV-JUDIKA_MARPAUNG.pdf" download="" class="pill ghost" style="display:inline-flex; align-items:center; gap:10px; text-decoration:none; background:transparent; color:var(--text); border:2px solid color-mix(in srgb, var(--text) 35%, transparent); padding:13px 28px; border-radius:9999px; font-size:13px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"></path><path d="m7 12 5 5 5-5"></path><path d="M5 21h14"></path></svg>
+              {{ t.hero.cv }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" style="scroll-margin-top:80px; padding:40px 0;">
+      <h2 style="font-size:clamp(24px,2.9vw,31px); font-weight:800; letter-spacing:-0.8px; color:var(--text); margin-bottom:20px;">{{ t.about.title }}</h2>
+      <div class="card" style="background:var(--surface); border-radius:20px; padding:36px; box-shadow:var(--cardShadow); border:1px solid var(--border);">
+        <p style="font-size:clamp(18px,2.4vw,23px); line-height:1.5; font-weight:700; color:var(--text); text-wrap:pretty; margin-bottom:14px;">{{ t.about.lead }}</p>
+        <p style="font-size:clamp(15px,1.9vw,18px); line-height:1.75; font-weight:500; color:var(--text2); text-wrap:pretty;">{{ t.about.body }}</p>
+      </div>
+    </section>
+
+    <section id="skills" style="scroll-margin-top:80px; padding:40px 0;">
+      <h2 style="font-size:clamp(24px,2.9vw,31px); font-weight:800; letter-spacing:-0.8px; color:var(--text); margin-bottom:20px;">{{ t.skills.title }}</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:12px;">
+        <sc-for list="{{ skills }}" as="s" hint-placeholder-count="8">
+          <button class="skill-chip {{ s.cls }}" data-skill="{{ s.name }}" onClick="{{ toggleSkill }}" onMouseEnter="{{ onSkillEnter }}" onMouseLeave="{{ onSkillLeave }}" title="{{ s.name }}" aria-pressed="{{ s.pressed }}">
+            <span class="skill-label">{{ s.name }}</span>
+            <span class="skill-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><use href="#{{ s.icon }}"></use></svg></span>
+          </button>
+        </sc-for>
+      </div>
+    </section>
+
+    <section id="education" style="scroll-margin-top:80px; padding:40px 0;">
+      <h2 style="font-size:clamp(24px,2.9vw,31px); font-weight:800; letter-spacing:-0.8px; color:var(--text); margin-bottom:24px;">{{ t.edu.title }}</h2>
+      <div class="edu-timeline">
+        <div class="edu-line"></div>
+        <sc-for list="{{ edu }}" as="p" hint-placeholder-count="4">
+          <div class="edu-row">
+            <div class="edu-node-col">
+              <sc-if value="{{ p.current }}" hint-placeholder-val="{{ true }}">
+                <span class="edu-node cur">{{ p.badge }}</span>
+              </sc-if>
+              <sc-if value="{{ p.notCurrent }}" hint-placeholder-val="{{ true }}">
+                <span class="edu-node past">{{ p.badge }}</span>
+              </sc-if>
+            </div>
+            <div class="edu-content" style="padding:8px 18px; margin:-2px 0;">
+              <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:6px;">
+                <h3 style="font-size:18px; font-weight:800;">{{ p.school }}</h3>
+                <span class="edu-period" style="font-size:11px; font-weight:700; letter-spacing:0.6px; color:var(--accent); background:color-mix(in srgb, var(--green) 14%, transparent); padding:4px 11px; border-radius:9999px; white-space:nowrap;">{{ p.period }}</span>
+              </div>
+              <p style="font-size:14px; font-weight:600; color:var(--text);">{{ p.level }}</p>
+              <sc-if value="{{ p.desc }}" hint-placeholder-val="{{ true }}">
+                <p style="font-size:14px; line-height:1.6; color:var(--text2); text-wrap:pretty; margin-top:8px;">{{ p.desc }}</p>
+              </sc-if>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section id="certificates" style="scroll-margin-top:80px; padding:40px 0;">
+      <div style="display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:6px 16px; margin-bottom:16px;">
+        <h2 style="font-size:clamp(24px,2.9vw,31px); font-weight:800; letter-spacing:-0.8px; color:var(--text);">{{ t.certs.title }}</h2>
+        <a href="#sertifikat" onClick="{{ openCertsPage }}" class="cert-all" style="display:inline-flex; align-items:center; gap:7px; margin-left:auto; text-decoration:none; color:var(--accent); font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; white-space:nowrap; padding:6px 2px;">
+          {{ certsAllLabel }}
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+        </a>
+      </div>
+      <div class="cert-strip-wrap">
+        <div class="cert-strip" ref="{{ certStripRef }}">
+          <sc-for list="{{ certs }}" as="c" hint-placeholder-count="7">
+            <button class="cert-mini" onClick="{{ openCert }}" data-cidx="{{ c.idx }}" title="{{ c.openTitle }}" aria-label="{{ c.openTitle }}">
+              <img src="{{ c.img }}" alt="" loading="lazy" decoding="async">
+              <span class="cert-mini-tag">{{ c.tag }}</span>
+            </button>
+          </sc-for>
+        </div>
+        <div class="cert-fade left"></div>
+        <div class="cert-fade right"></div>
+        <button class="cert-nav left" onClick="{{ scrollCertsPrev }}" aria-label="{{ certsPrevLabel }}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"></path></svg>
+        </button>
+        <button class="cert-nav right" onClick="{{ scrollCertsNext }}" aria-label="{{ certsNextLabel }}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"></path></svg>
+        </button>
+      </div>
+    </section>
+
+    <section id="projects" style="scroll-margin-top:80px; padding:40px 0;">
+      <h2 style="font-size:clamp(24px,2.9vw,31px); font-weight:800; letter-spacing:-0.8px; color:var(--text); margin-bottom:20px;">{{ t.projects.title }}</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:8px;">
+        <sc-for list="{{ projects }}" as="p" hint-placeholder-count="3">
+          <div class="proj-card" onClick="{{ openProject }}" data-idx="{{ p.idx }}" title="{{ p.openTitle }}" style="background:var(--surface); border:1px solid var(--border); border-radius:20px; padding:16px; box-shadow:var(--cardShadow);">
+            <div style="position:relative; margin-bottom:16px;">
+              <div style="position:relative; aspect-ratio:4/3; border-radius:14px; overflow:hidden; box-shadow:var(--cardShadow); background:linear-gradient(150deg, var(--surface3), var(--surface));">
+                <x-import component-from-global-scope="image-slot" from="./image-slot.js?v=2" id="{{ p.slot }}" src="{{ p.src }}" class="proj-cover" shape="rounded" radius="14" placeholder="Cover" hint-size="100%,100%" style="position:absolute; inset:0; width:100%; height:100%; display:block;"></x-import>
+              </div>
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
+              <h3 style="font-size:16px; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0;">{{ p.name }}</h3>
+              <span class="proj-arrow" style="flex-shrink:0; color:var(--accent); display:inline-flex; opacity:0; transform:translateX(-4px); transition:opacity .25s ease, transform .25s ease;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"></path></svg>
+              </span>
+            </div>
+            <p style="font-size:13px; line-height:1.45; color:var(--text2); overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; margin-bottom:12px;">{{ p.desc }}</p>
+            <div style="display:flex; flex-wrap:wrap; gap:6px;">
+              <sc-for list="{{ p.stack }}" as="tech" hint-placeholder-count="2">
+                <span class="proj-tag" style="font-size:10px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; color:var(--accent); background:color-mix(in srgb, var(--green) 13%, transparent); padding:4px 9px; border-radius:9999px;">{{ tech }}</span>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section id="contact" style="scroll-margin-top:80px; padding:40px 0 24px;">
+      <h2 style="font-size:clamp(24px,2.9vw,31px); font-weight:800; letter-spacing:-0.8px; color:var(--text); margin-bottom:20px;">{{ t.contact.title }}</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; align-items:start;">
+
+        <div class="card" style="background:var(--surface); border-radius:20px; padding:32px; box-shadow:var(--cardShadow); border:1px solid var(--border);">
+          <p style="font-size:16px; font-weight:700; margin-bottom:6px;">{{ t.contact.connectTitle }}</p>
+          <p style="font-size:13px; color:var(--text2); line-height:1.6; margin-bottom:24px;">{{ t.contact.connectSub }}</p>
+          <div style="display:flex; gap:14px; flex-wrap:wrap;">
+            <a href="mailto:inijudika@gmail.com" aria-label="Email" class="iconbtn" style="width:48px; height:48px; border-radius:50%; border:1px solid var(--border); background:var(--surface2); color:var(--text2); display:flex; align-items:center; justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/judika-marpaung" aria-label="LinkedIn" class="iconbtn" style="width:48px; height:48px; border-radius:50%; border:1px solid var(--border); background:var(--surface2); color:var(--text2); display:flex; align-items:center; justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM0 8h5v16H0V8zm7.5 0H12v2.2h.07c.63-1.2 2.17-2.46 4.46-2.46C21.4 7.74 24 10.2 24 15.07V24h-5v-7.9c0-1.88-.03-4.3-2.62-4.3-2.62 0-3.02 2.05-3.02 4.16V24H8.4V8z"></path></svg>
+            </a>
+            <a href="https://github.com/JudikaM" aria-label="GitHub" class="iconbtn" style="width:48px; height:48px; border-radius:50%; border:1px solid var(--border); background:var(--surface2); color:var(--text2); display:flex; align-items:center; justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.39 1.24-3.23-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.92 1.23 3.23 0 4.62-2.81 5.64-5.49 5.94.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"></path></svg>
+            </a>
+            <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=341eokt" aria-label="Instagram" class="iconbtn" style="width:48px; height:48px; border-radius:50%; border:1px solid var(--border); background:var(--surface2); color:var(--text2); display:flex; align-items:center; justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle></svg>
+            </a>
+          </div>
+        </div>
+
+        <form onSubmit="{{ onSubmit }}" class="card" style="background:var(--surface); border-radius:20px; padding:32px; box-shadow:var(--cardShadow); border:1px solid var(--border); display:flex; flex-direction:column; gap:14px;">
+          <input value="{{ form.name }}" onChange="{{ onName }}" name="name" placeholder="{{ t.contact.fName }}" aria-label="{{ t.contact.fName }}" autocomplete="name" required style="background:var(--surface2); border:1px solid var(--border); border-radius:12px; padding:14px 16px; font-size:14px; color:var(--text); outline:none;">
+          <input value="{{ form.email }}" onChange="{{ onEmail }}" name="email" type="email" placeholder="{{ t.contact.fEmail }}" aria-label="{{ t.contact.fEmail }}" autocomplete="email" required style="background:var(--surface2); border:1px solid var(--border); border-radius:12px; padding:14px 16px; font-size:14px; color:var(--text); outline:none;">
+          <textarea value="{{ form.msg }}" onChange="{{ onMsg }}" name="message" placeholder="{{ t.contact.fMsg }}" aria-label="{{ t.contact.fMsg }}" rows="4" required style="background:var(--surface2); border:1px solid var(--border); border-radius:12px; padding:14px 16px; font-size:14px; color:var(--text); outline:none; resize:vertical;"></textarea>
+          <button type="submit" class="pill btn" style="align-self:flex-start; border:none; cursor:pointer; background:var(--green); color:var(--btn-text); padding:14px 32px; border-radius:9999px; font-size:13px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase;">{{ sendLabel }}</button>
+          <sc-if value="{{ formStatusShow }}" hint-placeholder-val="{{ true }}">
+            <p role="status" style="font-size:13px; font-weight:600; line-height:1.5; color:{{ formStatusColor }}; margin:0;">{{ formStatusMsg }}</p>
+          </sc-if>
+        </form>
+      </div>
+    </section>
+
+    <footer style="text-align:center; padding:48px 0 8px; border-top:1px solid var(--border); margin-top:24px;">
+      <p style="font-size:12px; color:var(--text2); letter-spacing:0.3px;">{{ t.footer }}</p>
+    </footer>
+  </main>
+
+  <nav class="botbar" ref="{{ botbarRef }}" aria-label="Section navigation" style="position:fixed; left:0; right:0; bottom:0; z-index:60; align-items:center; justify-content:space-around; height:64px; background:var(--navbg); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); border-top:1px solid var(--border);">
+    <span ref="{{ botPillRef }}" style="position:absolute; top:8px; height:38px; left:{{ botPillLeft }}; width:{{ botPillWidth }}; opacity:{{ botPillOpacity }}; background:var(--green); border-radius:12px; transform-origin:center; z-index:0; pointer-events:none; box-shadow:0 4px 10px color-mix(in srgb, var(--green) 24%, transparent); transition:left .42s cubic-bezier(.5,.05,.18,1), width .42s cubic-bezier(.5,.05,.18,1), opacity .25s ease;"></span>
+    <a href="#home" onClick="{{ onNav }}" data-nav="home" aria-current="{{ ariaHome }}" aria-label="{{ t.nav.home }}" class="navlink botlink {{ botHome }}" style="display:flex; flex-direction:column; align-items:center; gap:0; text-decoration:none; font-size:0;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9.5V21h14V9.5"></path></svg>
+      <span class="bot-label">{{ t.nav.home }}</span>
+    </a>
+    <a href="#about" onClick="{{ onNav }}" data-nav="about" aria-current="{{ ariaAbout }}" aria-label="{{ t.nav.about }}" class="navlink botlink {{ botAbout }}" style="display:flex; flex-direction:column; align-items:center; gap:0; text-decoration:none; font-size:0;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg>
+      <span class="bot-label">{{ t.nav.about }}</span>
+    </a>
+    <a href="#education" onClick="{{ onNav }}" data-nav="education" aria-current="{{ ariaEducation }}" aria-label="{{ t.nav.education }}" class="navlink botlink {{ botEducation }}" style="display:flex; flex-direction:column; align-items:center; gap:0; text-decoration:none; font-size:0;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 9-10-5L2 9l10 5 10-5Z"></path><path d="M6 11.5V16c0 1.66 2.69 3 6 3s6-1.34 6-3v-4.5"></path></svg>
+      <span class="bot-label">{{ t.nav.education }}</span>
+    </a>
+    <a href="#projects" onClick="{{ onNav }}" data-nav="projects" aria-current="{{ ariaProjects }}" aria-label="{{ t.nav.projects }}" class="navlink botlink {{ botProjects }}" style="display:flex; flex-direction:column; align-items:center; gap:0; text-decoration:none; font-size:0;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>
+      <span class="bot-label">{{ t.nav.projects }}</span>
+    </a>
+    <a href="#contact" onClick="{{ onNav }}" data-nav="contact" aria-current="{{ ariaContact }}" aria-label="{{ t.nav.contact }}" class="navlink botlink {{ botContact }}" style="display:flex; flex-direction:column; align-items:center; gap:0; text-decoration:none; font-size:0;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg>
+      <span class="bot-label">{{ t.nav.contact }}</span>
+    </a>
+  </nav>
+
+  <sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ true }}">
+    <div class="modal-overlay" onClick="{{ closeProject }}" role="dialog" aria-modal="true" style="position:fixed; inset:0; z-index:200; display:flex; align-items:center; justify-content:center; padding:20px; background:rgba(0,0,0,0.62); backdrop-filter:blur(9px); -webkit-backdrop-filter:blur(9px);">
+      <div class="modal-card" onClick="{{ stopProp }}" style="position:relative; width:100%; max-width:560px; max-height:88vh; overflow-y:auto; background:var(--surface); border:1px solid var(--border); border-radius:24px; box-shadow:var(--menuShadow);">
+        <button onClick="{{ closeProject }}" aria-label="Close" class="modal-close" style="position:absolute; top:14px; right:14px; z-index:2; width:38px; height:38px; border-radius:50%; border:1px solid var(--border); background:color-mix(in srgb, var(--bg) 55%, transparent); color:var(--text); cursor:pointer; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6 18 18M18 6 6 18"></path></svg>
+        </button>
+        <div style="position:relative; aspect-ratio:16/9; overflow:hidden; border-radius:24px 24px 0 0; background-color:var(--surface3); background-image:{{ modalCoverBg }}; background-size:cover; background-position:center top;">
+          <div style="position:absolute; left:0; right:0; bottom:0; height:55%; background:linear-gradient(to top, var(--surface), transparent);"></div>
+        </div>
+        <div style="position:relative; padding:8px 30px 30px;">
+          <span style="display:inline-block; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:8px;">{{ modalKicker }}</span>
+          <h3 style="font-size:clamp(24px,5vw,32px); font-weight:900; letter-spacing:-0.8px; line-height:1.05; margin-bottom:14px;">{{ modalName }}</h3>
+          <div style="display:flex; flex-wrap:wrap; gap:7px; margin-bottom:18px;">
+            <sc-for list="{{ modalStack }}" as="tech" hint-placeholder-count="3">
+              <span style="font-size:10px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; color:var(--accent); background:color-mix(in srgb, var(--green) 13%, transparent); padding:5px 11px; border-radius:9999px;">{{ tech }}</span>
+            </sc-for>
+          </div>
+          <p style="font-size:15px; line-height:1.7; font-weight:500; color:var(--text2); text-wrap:pretty; margin-bottom:26px;">{{ modalDesc }}</p>
+          <div class="modal-actions" style="display:flex; flex-wrap:wrap; gap:14px;">
+            <sc-if value="{{ modalHasWeb }}" hint-placeholder-val="{{ true }}">
+              <a href="{{ modalWeb }}" target="_blank" rel="noopener noreferrer" class="modal-btn solid" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; text-decoration:none; background:var(--green); color:var(--btn-text); padding:15px 30px; border-radius:9999px; font-size:13px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.6 2.5 2.6 15 0 18M12 3c-2.6 2.5-2.6 15 0 18"></path></svg>
+                {{ modalWebLabel }}
+              </a>
+            </sc-if>
+            <sc-if value="{{ modalHasRepo }}" hint-placeholder-val="{{ true }}">
+              <a href="{{ modalRepo }}" target="_blank" rel="noopener noreferrer" class="modal-btn ghost" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; text-decoration:none; background:transparent; color:var(--text); border:2px solid color-mix(in srgb, var(--text) 35%, transparent); padding:13px 28px; border-radius:9999px; font-size:13px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.39 1.24-3.23-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.92 1.23 3.23 0 4.62-2.81 5.64-5.49 5.94.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"></path></svg>
+                {{ modalRepoLabel }}
+              </a>
+            </sc-if>
+            <sc-if value="{{ modalNoLinks }}" hint-placeholder-val="{{ true }}">
+              <span style="display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:600; color:var(--text2); padding:6px 0;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+                {{ modalSoon }}
+              </span>
+            </sc-if>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ certsPageOpen }}" hint-placeholder-val="{{ true }}">
+    <div class="certs-page" role="dialog" aria-modal="true" aria-label="{{ t.certs.title }}" style="position:fixed; inset:0; z-index:150; background:var(--bg); color:var(--text); overflow-y:auto; -webkit-overflow-scrolling:touch;">
+      <header style="position:sticky; top:0; z-index:5; background:var(--navbg); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); border-bottom:1px solid var(--border);">
+        <div style="max-width:1080px; margin:0 auto; display:flex; align-items:center; gap:16px; height:64px; padding:0 24px;">
+          <button onClick="{{ closeCertsPage }}" class="iconbtn certs-back" aria-label="{{ t.certs.back }}" style="width:38px; height:38px; border-radius:50%; border:1px solid var(--border); background:var(--surface2); color:var(--text); cursor:pointer; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><path d="m12 19-7-7 7-7"></path></svg>
+          </button>
+          <span style="font-size:16px; font-weight:800; letter-spacing:-0.3px;">{{ t.certs.title }}</span>
+        </div>
+      </header>
+      <div style="max-width:1080px; margin:0 auto; padding:26px 24px 80px;">
+        <p style="font-size:14px; color:var(--text2); margin-bottom:22px;">{{ t.certs.sub }}</p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:14px;">
+          <sc-for list="{{ certs }}" as="c" hint-placeholder-count="7">
+            <div class="cert-card" onClick="{{ openCert }}" data-cidx="{{ c.idx }}" title="{{ c.openTitle }}" style="background:var(--surface); border:1px solid var(--border); border-radius:20px; padding:14px; box-shadow:var(--cardShadow);">
+              <div class="cert-thumb" style="margin-bottom:14px;">
+                <img src="{{ c.img }}" alt="{{ c.title }}" loading="lazy" decoding="async">
+              </div>
+              <span style="display:inline-block; font-size:10px; font-weight:700; letter-spacing:0.6px; text-transform:uppercase; color:var(--accent); background:color-mix(in srgb, var(--green) 13%, transparent); padding:4px 10px; border-radius:9999px; margin-bottom:9px;">{{ c.tag }}</span>
+              <h3 style="font-size:15px; font-weight:700; line-height:1.3; margin-bottom:6px; text-wrap:pretty;">{{ c.title }}</h3>
+              <p style="font-size:12.5px; color:var(--text2); line-height:1.45;">{{ c.meta }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ certModalOpen }}" hint-placeholder-val="{{ true }}">
+    <div class="modal-overlay" onClick="{{ closeCert }}" role="dialog" aria-modal="true" style="position:fixed; inset:0; z-index:200; display:flex; align-items:center; justify-content:center; padding:20px; background:rgba(0,0,0,0.72); backdrop-filter:blur(9px); -webkit-backdrop-filter:blur(9px);">
+      <div class="modal-card" onClick="{{ stopProp }}" style="position:relative; width:100%; max-width:840px; max-height:90vh; overflow-y:auto; background:var(--surface); border:1px solid var(--border); border-radius:24px; box-shadow:var(--menuShadow);">
+        <button onClick="{{ closeCert }}" aria-label="Close" class="modal-close certmodal-close" style="position:absolute; top:14px; right:14px; z-index:2; width:38px; height:38px; border-radius:50%; border:1px solid var(--border); background:color-mix(in srgb, var(--bg) 55%, transparent); color:var(--text); cursor:pointer; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6 18 18M18 6 6 18"></path></svg>
+        </button>
+        <img src="{{ certModalImg }}" alt="{{ certModalTitle }}" style="display:block; width:100%; border-radius:24px 24px 0 0;">
+        <div style="padding:20px 30px 28px;">
+          <span style="display:inline-block; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:8px;">{{ certModalKicker }}</span>
+          <h3 style="font-size:clamp(20px,4vw,26px); font-weight:900; letter-spacing:-0.6px; line-height:1.15; margin-bottom:8px; text-wrap:pretty;">{{ certModalTitle }}</h3>
+          <p style="font-size:14px; line-height:1.6; font-weight:500; color:var(--text2);">{{ certModalMeta }}</p>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { theme: 'dark', lang: 'en', form: { name:'', email:'', msg:'' }, sent: false, typed: '', activeSkills: {}, hoveredSkill: null, activeNav: 'home', pill: { left: 0, width: 0 }, botPill: { left: 0, width: 0 }, modalIdx: null, certIdx: null, certsPage: false, formStatus: '' };
+
+  _hoverable = !(window.matchMedia && window.matchMedia('(hover: none)').matches);
+  onSkillEnter = (e) => { if (!this._hoverable) return; this.setState({ hoveredSkill: e.currentTarget.dataset.skill }); };
+  onSkillLeave = () => { if (!this._hoverable) return; this.setState({ hoveredSkill: null }); };
+  toggleSkill = (e) => { const k = e.currentTarget.dataset.skill; this.setState(s => { const next = { activeSkills: { ...s.activeSkills, [k]: !s.activeSkills[k] } }; if (!this._hoverable) next.hoveredSkill = null; return next; }); };
+  openProject = (e) => { const idx = parseInt(e.currentTarget.dataset.idx, 10); if (Number.isNaN(idx)) return; this._lastFocus = e.currentTarget; this.setState({ modalIdx: idx }); document.body.style.overflow = 'hidden'; requestAnimationFrame(() => { const btn = document.querySelector('.modal-close'); if (btn) btn.focus(); }); };
+  closeProject = () => { if (this.state.modalIdx == null) return; this.setState({ modalIdx: null }); document.body.style.overflow = ''; if (this._lastFocus && this._lastFocus.focus) { this._lastFocus.focus(); this._lastFocus = null; } };
+  openCert = (e) => { const idx = parseInt(e.currentTarget.dataset.cidx, 10); if (Number.isNaN(idx)) return; this._lastFocus = e.currentTarget; this.setState({ certIdx: idx }); document.body.style.overflow = 'hidden'; requestAnimationFrame(() => { const btn = document.querySelector('.certmodal-close'); if (btn) btn.focus(); }); };
+  closeCert = () => { if (this.state.certIdx == null) return; this.setState({ certIdx: null }); document.body.style.overflow = this.state.certsPage ? 'hidden' : ''; if (this._lastFocus && this._lastFocus.focus) { this._lastFocus.focus(); this._lastFocus = null; } };
+  openCertsPage = (e) => { if (e && e.preventDefault) e.preventDefault(); if (this.state.certsPage) return; this._pageLastFocus = (e && e.currentTarget) || null; this.setState({ certsPage: true }); document.body.style.overflow = 'hidden'; if (location.hash !== '#sertifikat') history.pushState(null, '', '#sertifikat'); requestAnimationFrame(() => { const b = document.querySelector('.certs-back'); if (b) b.focus(); }); };
+  closeCertsPage = () => { if (!this.state.certsPage) return; this._closeCertsPageNow(); if (location.hash === '#sertifikat') history.replaceState(null, '', location.pathname + location.search); };
+  _closeCertsPageNow = () => { if (!this.state.certsPage) return; this.setState({ certsPage: false, certIdx: null }); document.body.style.overflow = ''; if (this._pageLastFocus && this._pageLastFocus.focus) this._pageLastFocus.focus(); this._pageLastFocus = null; };
+  _onPop = () => { if (location.hash === '#sertifikat') { if (!this.state.certsPage) { this.setState({ certsPage: true }); document.body.style.overflow = 'hidden'; } } else { this._closeCertsPageNow(); } };
+  stopProp = (e) => { e.stopPropagation(); };
+  _onKey = (e) => { if (e.key !== 'Escape') return; if (this.state.certIdx != null) { this.closeCert(); return; } if (this.state.modalIdx != null) { this.closeProject(); return; } if (this.state.certsPage) this.closeCertsPage(); };
+  _typeTimer = null;
+  navRef = React.createRef();
+  pillRef = React.createRef();
+  botbarRef = React.createRef();
+  botPillRef = React.createRef();
+  langPillRef = React.createRef();
+  certStripRef = React.createRef();
+
+  scrollCertsNext = () => { const el = this.certStripRef.current; if (!el) return; el.scrollBy({ left: Math.round(el.clientWidth * 0.8), behavior: 'smooth' }); };
+  scrollCertsPrev = () => { const el = this.certStripRef.current; if (!el) return; el.scrollBy({ left: -Math.round(el.clientWidth * 0.8), behavior: 'smooth' }); };
+  _updateCertFade = () => { const el = this.certStripRef.current; if (!el || !el.parentElement) return; const wrap = el.parentElement; const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4; wrap.classList.toggle('at-end', atEnd); wrap.classList.toggle('scrolled', el.scrollLeft > 4); };
+
+  componentDidMount() { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; window.scrollTo({ top: 0, behavior: 'auto' }); this._startTyping(); this._syncPill(); requestAnimationFrame(() => this._syncPill()); setTimeout(() => this._syncPill(), 250); if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => this._syncPill()); window.addEventListener('load', this._syncPill); window.addEventListener('resize', this._syncPill); window.addEventListener('scroll', this._onScroll, { passive: true }); window.addEventListener('keydown', this._onKey); this._onScroll(); if (this.botbarRef.current) this.botbarRef.current.addEventListener('touchstart', this._onNavTouchStart, { passive: false }); if (this.navRef.current) this.navRef.current.addEventListener('touchstart', this._onNavTouchStart, { passive: false }); window.addEventListener('popstate', this._onPop); if (location.hash === '#sertifikat') { this.setState({ certsPage: true }); document.body.style.overflow = 'hidden'; } if (this.certStripRef.current) this.certStripRef.current.addEventListener('scroll', this._updateCertFade, { passive: true }); window.addEventListener('resize', this._updateCertFade); requestAnimationFrame(() => this._updateCertFade()); setTimeout(() => this._updateCertFade(), 400); if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => this._updateCertFade()); }
+  componentWillUnmount() { clearInterval(this._typeTimer); window.removeEventListener('resize', this._syncPill); window.removeEventListener('scroll', this._onScroll); window.removeEventListener('keydown', this._onKey); document.body.style.overflow = ''; if (this.botbarRef.current) this.botbarRef.current.removeEventListener('touchstart', this._onNavTouchStart); if (this.navRef.current) this.navRef.current.removeEventListener('touchstart', this._onNavTouchStart); window.removeEventListener('popstate', this._onPop); window.removeEventListener('resize', this._updateCertFade); if (this.certStripRef.current) this.certStripRef.current.removeEventListener('scroll', this._updateCertFade); }
+
+  _navIds = ['about', 'skills', 'education', 'certificates', 'projects', 'contact'];
+  _scrollRaf = 0;
+  _spyLock = 0;
+  _spyRaf = 0;
+
+  _onScroll = () => {
+    if (this._spyRaf) return;
+    this._spyRaf = requestAnimationFrame(() => {
+      this._spyRaf = 0;
+      if (Date.now() < this._spyLock) return;
+      const doc = document.documentElement;
+      const atBottom = window.innerHeight + window.scrollY >= doc.scrollHeight - 4;
+      let current;
+      if (atBottom) {
+        current = this._navIds[this._navIds.length - 1];
+      } else {
+        const heroEl = document.getElementById('home');
+        const heroDocBottom = heroEl ? heroEl.offsetTop + heroEl.offsetHeight : 0;
+        if (window.scrollY < heroDocBottom - 150) {
+          current = 'home';
+        } else {
+          current = 'home';
+          const line = 140;
+          for (const id of this._navIds) {
+            const sec = document.getElementById(id);
+            if (sec && sec.getBoundingClientRect().top <= line) current = id;
+          }
+        }
+      }
+      if (current !== this.state.activeNav) this._setActive(current);
+    });
+  };
+
+  _setActive = (id) => {
+    const nav = this.navRef.current;
+    const el = nav && nav.querySelector('[data-nav="' + id + '"]');
+    const target = el ? { left: el.offsetLeft, width: el.offsetWidth } : this.state.pill;
+    this.setState({ activeNav: id });
+    this._movePill(target);
+    this._placeBotPill(id, true);
+  };
+
+  _placeBotPill = (id, doAnim) => {
+    const bar = this.botbarRef.current;
+    if (!bar) return;
+    const el = bar.querySelector('[data-nav="' + id + '"]');
+    if (!el) { if (this.state.botPill.width) this.setState({ botPill: { left: this.state.botPill.left, width: 0 } }); return; }
+    const iconW = el.querySelector('svg')?.getBoundingClientRect().width || 18;
+    const labelW = el.querySelector('.bot-label')?.getBoundingClientRect().width || 0;
+    const contentW = Math.max(iconW, labelW);
+    const w = Math.max(42, Math.ceil(contentW + 16));
+    const barRect = bar.getBoundingClientRect();
+    const itemRect = el.getBoundingClientRect();
+    const itemCenter = itemRect.left - (barRect.left + bar.clientLeft) + (itemRect.width / 2);
+    const target = { left: Number((itemCenter - (w / 2)).toFixed(2)), width: w };
+    const cur = this.state.botPill;
+    const moved = cur.width && Math.abs(target.left - cur.left) > 1;
+    this.setState({ botPill: target });
+    if (doAnim && moved && this.botPillRef.current && this.botPillRef.current.animate) {
+      this.botPillRef.current.animate(
+        [{ transform: 'scaleX(1) scaleY(1)' }, { transform: 'scaleX(1.35) scaleY(0.72)' }, { transform: 'scaleX(1) scaleY(1)' }],
+        { duration: 480, easing: 'cubic-bezier(.45,.05,.2,1)' }
+      );
+    }
+  };
+
+  _movePill = (target) => {
+    const cur = this.state.pill;
+    if (!cur.width || !target.width) { this.setState({ pill: target }); return; }
+    const moved = Math.abs(target.left - cur.left) > 1 || Math.abs(target.width - cur.width) > 1;
+    this.setState({ pill: target });
+    if (moved && this.pillRef.current && this.pillRef.current.animate) {
+      this.pillRef.current.animate(
+        [{ transform: 'scaleX(1) scaleY(1)' }, { transform: 'scaleX(1.3) scaleY(0.78)' }, { transform: 'scaleX(1) scaleY(1)' }],
+        { duration: 520, easing: 'cubic-bezier(.45,.05,.2,1)' }
+      );
+    }
+  };
+
+  _syncPill = () => {
+    const nav = this.navRef.current;
+    if (!nav) return;
+    const el = nav.querySelector('[data-nav="' + this.state.activeNav + '"]');
+    if (!el) return;
+    this.setState({ pill: { left: el.offsetLeft, width: el.offsetWidth } });
+    this._placeBotPill(this.state.activeNav, false);
+  };
+
+  _onNavTouchStart = (e) => {
+    const link = e.target.closest('[data-nav]');
+    if (!link) return;
+    e.preventDefault();
+    const id = link.dataset.nav;
+    this._spyLock = Date.now() + 1100;
+    if (id === 'home') {
+      this._smoothScrollTo(0);
+    } else {
+      const sec = document.getElementById(id);
+      if (sec) {
+        const bar = document.querySelector('.topbar');
+        const barH = bar ? bar.offsetHeight : 64;
+        const y = sec.getBoundingClientRect().top + window.scrollY - barH - 14;
+        this._smoothScrollTo(y);
+      }
+    }
+    this.setState({ activeNav: id });
+    const nav = this.navRef.current;
+    const navLink = nav && nav.querySelector('[data-nav="' + id + '"]');
+    if (navLink) this._movePill({ left: navLink.offsetLeft, width: navLink.offsetWidth });
+    this._placeBotPill(id, true);
+  };
+
+  onNav = (e) => {
+    e.preventDefault();
+    const id = e.currentTarget.dataset.nav;
+    this._spyLock = Date.now() + 1100;
+    // Start the scroll FIRST, before any setState/re-render, so motion
+    // begins on the very next frame with no wait on mobile.
+    if (id === 'home') {
+      this._smoothScrollTo(0);
+    } else {
+      const sec = document.getElementById(id);
+      if (sec) {
+        const bar = document.querySelector('.topbar');
+        const barH = bar ? bar.offsetHeight : 64;
+        const y = sec.getBoundingClientRect().top + window.scrollY - barH - 14;
+        this._smoothScrollTo(y);
+      }
+    }
+    // Pill + active-state are cosmetic; update them after so the re-render
+    // can't block the scroll from starting.
+    this.setState({ activeNav: id });
+    const nav = this.navRef.current;
+    const link = nav && nav.querySelector('[data-nav="' + id + '"]');
+    if (link) this._movePill({ left: link.offsetLeft, width: link.offsetWidth });
+    this._placeBotPill(id, true);
+  };
+
+  _smoothScrollTo = (target) => {
+    if (this._scrollRaf) cancelAnimationFrame(this._scrollRaf);
+    const start = window.scrollY;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const dest = Math.max(0, Math.min(target, max));
+    const dist = dest - start;
+    if (Math.abs(dist) < 2) return;
+    const dur = Math.min(1800, Math.max(900, Math.abs(dist) * 0.95));
+    const t0 = performance.now();
+    const ease = (t) => 1 - Math.pow(1 - t, 5);
+    const step = (now) => {
+      const p = Math.min(1, (now - t0) / dur);
+      window.scrollTo({ top: start + dist * ease(p), behavior: 'auto' });
+      if (p < 1) { this._scrollRaf = requestAnimationFrame(step); }
+      else { this._scrollRaf = 0; }
+    };
+    this._scrollRaf = requestAnimationFrame(step);
+  };
+
+  _startTyping(lang) {
+    clearInterval(this._typeTimer);
+    const full = this.content[lang || this.state.lang].hero.tagline;
+    let i = 0;
+    this.setState({ typed: '' });
+    this._typeTimer = setInterval(() => {
+      i++;
+      this.setState({ typed: full.slice(0, i) });
+      if (i >= full.length) clearInterval(this._typeTimer);
+    }, 45);
+  }
+
+  content = {
+    id: {
+      nav: { home:'Beranda', about:'Tentang', skills:'Keahlian', education:'Pendidikan', certificates:'Sertifikat', projects:'Proyek', contact:'Kontak' },
+      hero: { kicker:'Teknik Informatika \u00b7 Perbanas Institute', tagline:'Fokus Keamanan Siber & Audit Smart Contract', cta:'Kontak Saya', cv:'Download CV' },
+      about: { title:'Tentang Saya', lead:'Mahasiswa Teknik Informatika semester 7 di Perbanas Institute Jakarta dengan minat mendalam pada keamanan siber.', body:'Saya gemar membedah kerentanan sistem dan membangun aplikasi web yang aman dari menganalisis celah keamanan hingga merancang solusi yang tahan terhadap serangan nyata. Perjalanan ini membawa saya ke dunia blockchain, di mana saya mulai mengeksplorasi smart contract di ekosistem Ethereum dan menyadari bahwa keamanan di ranah ini bukan sekadar fitur, melainkan fondasi. Saat ini fokus mengasah kemampuan secure coding dan audit smart contract untuk berkontribusi membangun sistem digital yang lebih aman dan dapat dipercaya.' },
+      skills: { title:'Keahlian' },
+      edu: { title:'Pendidikan', items:[
+        { badge:'S1', school:'Perbanas Institute Jakarta', period:'2023 \u2014 Sekarang', level:'S1 Teknik Informatika', desc:'Berfokus pada keamanan jaringan, pemrograman aman, dan pengembangan perangkat lunak berbasis teknologi informasi.' },
+        { badge:'SMK', school:'SMK Penerbangan PBD Medan', period:'2020 \u2014 2023', level:'Sekolah Menengah Kejuruan \u2014 Electrical Avionic', desc:'Spesialisasi di sistem kelistrikan dan avionik pesawat, membangun fondasi teknis yang kuat sebagai bekal di dunia teknologi informasi.' },
+        { badge:'SMP', school:'SMP Swasta Budhi Dharma Balige', period:'2017 \u2014 2020', level:'Sekolah Menengah Pertama', desc:'' },
+        { badge:'SD', school:'SDN 173636 Narumonda', period:'2011 \u2014 2017', level:'Sekolah Dasar', desc:'' }
+      ] },
+      certs: { title:'Sertifikat & Pelatihan', sub:'Sertifikat magang serta pelatihan yang telah saya selesaikan.', viewAll:'Lihat semua', back:'Kembali', items:[
+        { img:'./cert-magang-liat.jpg', tag:'Magang', title:'On-The-Job Training (PKL)', issuer:'PT Langit Inovasi Aksi Teknologi', date:'Sep \u2013 Des 2025' },
+        { img:'./cert-coursera-python.jpg', tag:'Kursus', title:'Programming for Everybody (Getting Started with Python)', issuer:'University of Michigan \u00b7 Coursera', date:'Jul 2026' },
+        { img:'./cert-coursera-ai.jpg', tag:'Kursus', title:'Introduction to AI', issuer:'Google \u00b7 Coursera', date:'Jul 2026' },
+        { img:'./cert-coursera-os.jpg', tag:'Kursus', title:'Introduction to Computers and Operating Systems and Security', issuer:'Microsoft \u00b7 Coursera', date:'Jul 2026' },
+        { img:'./cert-erp.png', tag:'Kursus', title:'Enterprise Resource Planning (ERP)', issuer:'BISA.AI Academy', date:'Nov 2025' },
+        { img:'./cert-system-analyst.png', tag:'Kursus', title:'Mengenal Profesi System Analyst', issuer:'BISA.AI Academy', date:'Nov 2025' },
+        { img:'./cert-uml.png', tag:'Kursus', title:'UML \u2014 Analisa & Perancangan Berorientasi Objek', issuer:'BISA.AI Academy', date:'Nov 2025' },
+        { img:'./cert-figma.png', tag:'Kursus', title:'Basic Figma \u2014 UI Aplikasi Mobile', issuer:'BISA.AI Academy', date:'Nov 2025' },
+        { img:'./cert-seo.png', tag:'Kursus', title:'Desain Website yang SEO Friendly', issuer:'BISA.AI Academy', date:'Nov 2025' },
+        { img:'./cert-ux-research.png', tag:'Kursus', title:'Teknik Survei & Wawancara dalam UX Research', issuer:'BISA.AI Academy', date:'Nov 2025' }
+      ] },
+      projects: { title:'Proyek', colTitle:'Judul', colStack:'Stack', detailKicker:'Detail Proyek', viewRepo:'Kunjungi Repo', viewWeb:'Kunjungi Web', soon:'Repo & demo akan segera ditambahkan.', items:[
+        { slot:'proj-1', src:'./proj-younglings.svg', tag:'Solidity \u00b7 Web3', stack:['Solidity','Web3.py','Python'], name:'Younglings', desc:'Alat audit kontrak pintar Solidity untuk mendeteksi kerentanan reentrancy, integer overflow, dan akses tidak sah.' },
+        { slot:'proj-2', src:'./hom.jpeg', tag:'React \u00b7 Firebase', stack:['React','Node.js','Express','Firebase'], url:'https://github.com/JudikaM/warungku-app', name:'Warungku', desc:'Aplikasi food delivery lengkap dengan backend Node.js & Express terhubung Firebase, frontend pelanggan, dan dashboard admin berbasis React + Vite.' },
+        { slot:'proj-3', src:'./proj-nakamotox.svg', tag:'Python \u00b7 FastAPI', stack:['Python','FastAPI','Laravel 12','Alpine.js','Docker','SQLite'], name:'NakamotoX', desc:'Aplikasi edukasi berbasis microservices yang memvisualisasikan mekanisme internal algoritma enkripsi ChaCha20 dan Caesar Cipher secara real-time, hingga ke level operasi bitwise (ARX).' }
+      ] },
+      contact: { title:'Kontak', connectTitle:'Mari Terhubung', connectSub:'Terbuka untuk magang, freelance, dan pekerjaan tetap.', fName:'Nama', fEmail:'Email', fMsg:'Pesan' },
+      send:'Kirim Pesan', sentMsg:'Terkirim \u2713',
+      footer:'\u00a9 2026 Judika Marpaung \u00b7 Dibangun dengan hati.'
+    },
+    en: {
+      nav: { home:'Home', about:'About', skills:'Skills', education:'Education', certificates:'Certificates', projects:'Projects', contact:'Contact' },
+      hero: { kicker:'Informatics Engineering \u00b7 Perbanas Institute', tagline:'Focused on Cyber Security & Smart Contract Auditing', cta:'Contact Me', cv:'Download CV' },
+      about: { title:'About Me', lead:'A seventh-semester Informatics Engineering student at Perbanas Institute Jakarta with a deep interest in cyber security.', body:'I love dissecting system vulnerabilities, building secure web applications, and exploring blockchain technology and smart contracts in the Ethereum ecosystem. Currently focused on sharpening my secure-coding and smart-contract auditing skills to help build safer, more trustworthy digital systems.' },
+      skills: { title:'Skills' },
+      edu: { title:'Education', items:[
+        { badge:'S1', school:'Perbanas Institute Jakarta', period:'2023 \u2014 Present', level:'B.Sc. Informatics Engineering', desc:'Focused on network security, secure programming, and software development in the field of information technology.' },
+        { badge:'SMK', school:'PBD Aviation Vocational High School, Medan', period:'2020 \u2014 2023', level:'Vocational High School \u2014 Electrical Avionic', desc:'Specialized in aircraft electrical systems and avionics, building a strong technical foundation as a stepping stone into the world of information technology.' },
+        { badge:'SMP', school:'Budhi Dharma Private Junior High School Balige', period:'2017 \u2014 2020', level:'Junior High School', desc:'' },
+        { badge:'SD', school:'State Elementary School 173636 Narumonda', period:'2011 \u2014 2017', level:'Elementary School', desc:'' }
+      ] },
+      certs: { title:'Certificates & Training', sub:'Internship certificate and training programs I have completed.', viewAll:'View all', back:'Back', items:[
+        { img:'./cert-magang-liat.jpg', tag:'Internship', title:'On-The-Job Training', issuer:'PT Langit Inovasi Aksi Teknologi', date:'Sep \u2013 Dec 2025' },
+        { img:'./cert-coursera-python.jpg', tag:'Course', title:'Programming for Everybody (Getting Started with Python)', issuer:'University of Michigan \u00b7 Coursera', date:'Jul 2026' },
+        { img:'./cert-coursera-ai.jpg', tag:'Course', title:'Introduction to AI', issuer:'Google \u00b7 Coursera', date:'Jul 2026' },
+        { img:'./cert-coursera-os.jpg', tag:'Course', title:'Introduction to Computers and Operating Systems and Security', issuer:'Microsoft \u00b7 Coursera', date:'Jul 2026' },
+        { img:'./cert-erp.png', tag:'Course', title:'Enterprise Resource Planning (ERP)', issuer:'BISA.AI Academy', date:'Nov 2025' },
+        { img:'./cert-system-analyst.png', tag:'Course', title:'Introduction to the System Analyst Profession', issuer:'BISA.AI Academy', date:'Nov 2025' },
+        { img:'./cert-uml.png', tag:'Course', title:'UML \u2014 Object-Oriented Analysis & Design', issuer:'BISA.AI Academy', date:'Nov 2025' },
+        { img:'./cert-figma.png', tag:'Course', title:'Basic Figma \u2014 Mobile App UI', issuer:'BISA.AI Academy', date:'Nov 2025' },
+        { img:'./cert-seo.png', tag:'Course', title:'Designing SEO-Friendly Websites', issuer:'BISA.AI Academy', date:'Nov 2025' },
+        { img:'./cert-ux-research.png', tag:'Course', title:'Survey & Interview Techniques in UX Research', issuer:'BISA.AI Academy', date:'Nov 2025' }
+      ] },
+      projects: { title:'Projects', colTitle:'Title', colStack:'Stack', detailKicker:'Project Detail', viewRepo:'View Repo', viewWeb:'Visit Site', soon:'Repo & live demo coming soon.', items:[
+        { slot:'proj-1', src:'./proj-younglings.svg', tag:'Solidity \u00b7 Web3', stack:['Solidity','Web3.py','Python'], name:'Younglings', desc:'A Solidity smart-contract auditing tool that detects reentrancy, integer overflow, and unauthorized-access vulnerabilities.' },
+        { slot:'proj-2', src:'./hom.jpeg', tag:'React \u00b7 Firebase', stack:['React','Node.js','Express','Firebase'], url:'https://github.com/JudikaM/warungku-app', name:'Warungku', desc:'A complete food delivery app with a Node.js & Express backend connected to Firebase, a React + Vite customer frontend, and a React + Vite admin dashboard.' },
+        { slot:'proj-3', src:'./proj-nakamotox.svg', tag:'Python \u00b7 FastAPI', stack:['Python','FastAPI','Laravel 12','Alpine.js','Docker','SQLite'], name:'NakamotoX', desc:'An education app built on microservices that visualizes the internal mechanisms of ChaCha20 and Caesar Cipher encryption algorithms in real-time, down to bitwise operations (ARX).' }
+      ] },
+      contact: { title:'Contact', connectTitle:'Let\u2019s Connect', connectSub:'Open to internships, freelance, and full-time work.', fName:'Name', fEmail:'Email', fMsg:'Message' },
+      send:'Send Message', sentMsg:'Sent \u2713',
+      footer:'\u00a9 2026 Judika Marpaung \u00b7 Built with heart.'
+    }
+  };
+
+  skills = [
+    { name:'Python', icon:'ic-python' },
+    { name:'JavaScript', icon:'ic-js' },
+    { name:'Solidity', icon:'ic-sol' },
+    { name:'Web3.py', icon:'ic-web3' },
+    { name:'React', icon:'ic-react' },
+    { name:'Node.js', icon:'ic-node' },
+    { name:'Docker', icon:'ic-docker' },
+    { name:'Linux', icon:'ic-linux' },
+    { name:'Burp Suite', icon:'ic-burp' },
+    { name:'Wireshark', icon:'ic-wireshark' },
+    { name:'Git', icon:'ic-git' },
+    { name:'PostgreSQL', icon:'ic-pg' },
+    { name:'Laravel', icon:'ic-laravel' }
+  ];
+
+  onHome = (e) => { e.preventDefault(); this._spyLock = Date.now() + 1100; this._setActive('home'); this._smoothScrollTo(0); };
+
+  toggleTheme = () => this.setState(s => {
+    const theme = s.theme === 'dark' ? 'light' : 'dark';
+    const m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', theme === 'dark' ? '#121212' : '#ffffff');
+    return { theme };
+  });
+  setID = () => { if (this.state.lang === 'id') return; document.documentElement.lang = 'id'; this.setState({ lang:'id' }); this._startTyping('id'); this._syncPill(); };
+  setEN = () => { if (this.state.lang === 'en') return; document.documentElement.lang = 'en'; this.setState({ lang:'en' }); this._startTyping('en'); this._syncPill(); };
+
+  onName = (e) => { const v = e.target.value; this.setState(s => ({ form:{...s.form, name:v}, sent:false, formStatus:'' })); };
+  onEmail = (e) => { const v = e.target.value; this.setState(s => ({ form:{...s.form, email:v}, sent:false, formStatus:'' })); };
+  onMsg = (e) => { const v = e.target.value; this.setState(s => ({ form:{...s.form, msg:v}, sent:false, formStatus:'' })); };
+  onSubmit = async (e) => {
+    e.preventDefault();
+    if (this.state.formStatus === 'sending') return;
+    const { name, email, msg } = this.state.form;
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+    if (!name.trim() || !emailOk || !msg.trim()) { this.setState({ formStatus: 'invalid', sent: false }); return; }
+    this.setState({ formStatus: 'sending' });
+    try {
+      const res = await fetch('https://formspree.io/f/mrewpokk', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ name, email, message: msg })
+      });
+      if (!res.ok) throw new Error('bad status');
+      this.setState({ sent: true, formStatus: 'sent', form: { name: '', email: '', msg: '' } });
+    } catch(_) {
+      this.setState({ formStatus: 'error', sent: false });
+    }
+  };
+
+  renderVals() {
+    const isDark = this.state.theme === 'dark';
+    const t = this.content[this.state.lang];
+    const isID = this.state.lang === 'id';
+    const an = this.state.activeNav;
+    const navColor = (id) => an === id ? 'var(--nav-active-text)' : 'var(--text2)';
+    const botCls = (id) => an === id ? 'on' : '';
+    const ariaCur = (id) => an === id ? 'page' : 'false';
+    const fs = this.state.formStatus;
+    const fsText = {
+      invalid: isID ? 'Lengkapi nama, email yang valid, dan pesan.' : 'Please fill in your name, a valid email, and a message.',
+      error: isID ? 'Gagal mengirim. Coba lagi atau email langsung ke inijudika@gmail.com.' : 'Failed to send. Please try again or email inijudika@gmail.com directly.',
+      sent: isID ? 'Pesan terkirim. Terima kasih!' : 'Message sent. Thank you!'
+    };
+    const mi = this.state.modalIdx;
+    const mp = (mi != null && t.projects.items[mi]) ? t.projects.items[mi] : null;
+    const ci = this.state.certIdx;
+    const cm = (ci != null && t.certs.items[ci]) ? t.certs.items[ci] : null;
+    const mpHasRepo = !!(mp && mp.url && mp.url !== '#');
+    const mpHasWeb = !!(mp && mp.web && mp.web !== '#');
+    return {
+      modalOpen: !!mp,
+      modalName: mp ? mp.name : '',
+      modalDesc: mp ? mp.desc : '',
+      modalStack: mp ? mp.stack : [],
+      modalCoverBg: (mp && mp.src) ? ('url("' + mp.src + '")') : 'none',
+      modalRepo: mp ? (mp.url || '') : '',
+      modalHasRepo: mpHasRepo,
+      modalWeb: mp ? (mp.web || '') : '',
+      modalHasWeb: mpHasWeb,
+      modalNoLinks: !!mp && !mpHasRepo && !mpHasWeb,
+      modalKicker: t.projects.detailKicker,
+      modalRepoLabel: t.projects.viewRepo,
+      modalWebLabel: t.projects.viewWeb,
+      modalSoon: t.projects.soon,
+      closeProject: this.closeProject,
+      certModalOpen: !!cm,
+      certModalImg: cm ? cm.img : '',
+      certModalTitle: cm ? cm.title : '',
+      certModalMeta: cm ? (cm.issuer + ' \u00b7 ' + cm.date) : '',
+      certModalKicker: cm ? cm.tag : '',
+      openCert: this.openCert,
+      closeCert: this.closeCert,
+      certsPageOpen: this.state.certsPage,
+      openCertsPage: this.openCertsPage,
+      closeCertsPage: this.closeCertsPage,
+      certsAllLabel: t.certs.viewAll + ' (' + t.certs.items.length + ')',
+      certStripRef: this.certStripRef,
+      scrollCertsNext: this.scrollCertsNext,
+      scrollCertsPrev: this.scrollCertsPrev,
+      certsNextLabel: isID ? 'Geser ke kanan' : 'Scroll right',
+      certsPrevLabel: isID ? 'Geser ke kiri' : 'Scroll left',
+      stopProp: this.stopProp,
+      botHome: botCls('home'),
+      botAbout: botCls('about'),
+      botEducation: botCls('education'),
+      botProjects: botCls('projects'),
+      botContact: botCls('contact'),
+      themeClass: isDark ? 'theme-dark' : 'theme-light',
+      typed: this.state.typed,
+      navRef: this.navRef,
+      pillRef: this.pillRef,
+      botbarRef: this.botbarRef,
+      botPillRef: this.botPillRef,
+      onNav: this.onNav,
+      onHome: this.onHome,
+      pillLeft: this.state.pill.width ? (this.state.pill.left + 'px') : '5px',
+      pillWidth: this.state.pill.width ? (this.state.pill.width + 'px') : '0px',
+      botPillLeft: this.state.botPill.width ? (this.state.botPill.left + 'px') : '0px',
+      botPillWidth: this.state.botPill.width ? (this.state.botPill.width + 'px') : '0px',
+      botPillOpacity: this.state.botPill.width ? '1' : '0',
+      navHome: navColor('home'),
+      navAbout: navColor('about'),
+      navSkills: navColor('skills'),
+      navEducation: navColor('education'),
+      navCertificates: navColor('certificates'),
+      navProjects: navColor('projects'),
+      navContact: navColor('contact'),
+      ariaHome: ariaCur('home'),
+      ariaAbout: ariaCur('about'),
+      ariaSkills: ariaCur('skills'),
+      ariaEducation: ariaCur('education'),
+      ariaCertificates: ariaCur('certificates'),
+      ariaProjects: ariaCur('projects'),
+      ariaContact: ariaCur('contact'),
+      themeIcon: isDark ? '\u2600' : '\u263e',
+      t,
+      skills: this.skills.map(s => { const lit = this.state.hoveredSkill===s.name || !!this.state.activeSkills[s.name]; return { ...s, cls:(lit?'lit ':'')+( this.state.activeSkills[s.name]?'active':''), pressed: this.state.activeSkills[s.name] ? 'true' : 'false' }; }),
+      onSkillEnter: this.onSkillEnter,
+      onSkillLeave: this.onSkillLeave,
+      toggleSkill: this.toggleSkill,
+      openProject: this.openProject,
+      edu: t.edu.items.map((e, i) => ({ ...e, current: i === 0, notCurrent: i !== 0 })),
+      projects: t.projects.items.map((p, i) => ({ ...p, idx: i, num: String(i + 1).padStart(2, '0'), openTitle: (isID ? 'Lihat detail ' : 'View details: ') + p.name })),
+      certs: t.certs.items.map((c, i) => ({ ...c, idx: i, meta: c.issuer + ' \u00b7 ' + c.date, openTitle: (isID ? 'Lihat sertifikat ' : 'View certificate: ') + c.title })),
+      form: this.state.form,
+      sendLabel: fs === 'sending' ? (isID ? 'Mengirim\u2026' : 'Sending\u2026') : (this.state.sent ? t.sentMsg : t.send),
+      formStatusShow: fs === 'invalid' || fs === 'error' || fs === 'sent',
+      formStatusMsg: fsText[fs] || '',
+      formStatusColor: fs === 'sent' ? 'var(--green)' : '#ef4444',
+      idBg: isID ? 'var(--green)' : 'transparent',
+      idColor: isID ? 'var(--btn-text)' : 'var(--text2)',
+      enBg: !isID ? 'var(--green)' : 'transparent',
+      enColor: !isID ? 'var(--btn-text)' : 'var(--text2)',
+      langShift: isID ? '0px' : '40px',
+      langPillRef: this.langPillRef,
+      toggleTheme: this.toggleTheme,
+      setID: this.setID,
+      setEN: this.setEN,
+      onName: this.onName, onEmail: this.onEmail, onMsg: this.onMsg, onSubmit: this.onSubmit
+    };
+  }
+}
+</script>
+</body>
+</html>

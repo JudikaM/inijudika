@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="NakamotoX — ChaCha20 and Caesar cipher visualizer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c1d24"/>
+      <stop offset="1" stop-color="#0f0f12"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.38" r="0.6">
+      <stop offset="0" stop-color="#bb86fc" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#bb86fc" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#cba4fd"/>
+      <stop offset="1" stop-color="#9b5df0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- ChaCha20 4x4 state matrix -->
+  <g>
+    <!-- row 1 -->
+    <rect x="236" y="106" width="70" height="70" rx="14" fill="url(#cell)"/>
+    <rect x="322" y="106" width="70" height="70" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1" stroke-width="2"/>
+    <rect x="408" y="106" width="70" height="70" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1" stroke-width="2"/>
+    <rect x="494" y="106" width="70" height="70" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1" stroke-width="2"/>
+    <!-- row 2 -->
+    <rect x="236" y="192" width="70" height="70" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1" stroke-width="2"/>
+    <rect x="322" y="192" width="70" height="70" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1" stroke-width="2"/>
+    <rect x="408" y="192" width="70" height="70" rx="14" fill="url(#cell)"/>
+    <rect x="494" y="192" width="70" height="70" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1" stroke-width="2"/>
+    <!-- row 3 -->
+    <rect x="236" y="278" width="70" height="70" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1" stroke-width="2"/>
+    <rect x="322" y="278" width="70" height="70" rx="14" fill="url(#cell)"/>
+    <rect x="408" y="278" width="70" height="70" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1" stroke-width="2"/>
+    <rect x="494" y="278" width="70" height="70" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1" stroke-width="2"/>
+    <!-- XOR symbol in one quiet cell -->
+    <g stroke="#bb86fc" stroke-width="5" fill="none">
+      <circle cx="529" cy="313" r="20"/>
+      <path d="M529 293v40M509 313h40"/>
+    </g>
+  </g>
+  <!-- wordmark -->
+  <text x="400" y="480" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="34" letter-spacing="7" fill="#ffffff">NAKAMOTOX</text>
+  <text x="400" y="516" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="14" letter-spacing="4" fill="#b8a6d9">CHACHA20 · ARX VISUALIZER</text>
+</svg>
